@@ -1,0 +1,435 @@
+/* --- GLOBAL RESET & BASE LAYOUT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Using system fonts to match native app look */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.mobile-app-container {
+    width: 100%;
+    max-width: 420px; 
+    /* Very light, almost imperceptible gray background for the overall app screen */
+    background-color: #fcfcfc; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER / TOP BAR --- */
+.header {
+    background-color: white; 
+    padding-top: 5px; 
+}/* --- QR TICKET HEADER ICON STYLES --- */
+
+/* Ensures the back arrow has proper spacing */
+.qr-header .fa-arrow-left {
+    margin-right: 10px;
+}
+
+/* Container for the circular ticket icon */
+.qr-ticket-icon-container {
+    width: 32px; 
+    height: 32px;
+    border-radius: 50%; 
+    background-color: #e0f0ff; /* Light blue circle background */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-right: 10px; /* Space between the icon and the '1 QR Ticket' label */
+}
+
+/* The ticket icon itself */
+.qr-ticket-icon {
+    font-size: 16px; 
+    color: #00b9f1; /* Bright blue color for the icon */
+}
+
+/* The label '1 QR Ticket' needs to take up the middle space */
+.qr-ticket-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    /* This pushes the 'Help' text to the far right */
+    margin-right: auto; 
+}
+
+/* General QR header styles (ensure this is still white) */
+.qr-header .top-nav {
+    background-color: white; 
+    justify-content: flex-start; /* Start from the left */
+}
+
+/* Ensure the help text is still far right */
+.qr-header .help-text {
+    margin-left: auto; 
+    color: #00b9f1;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.fa-arrow-left {
+    color: #4a4a4a;
+    font-size: 18px;
+}
+
+/* PAYTM LOGO FIX (Smaller and positioned off-center) */
+.paytm-logo-img { 
+    height: 16px; 
+    object-fit: contain; 
+    /* Pushes logo slightly past the center of the total width */
+    margin-left: 100px; 
+    margin-right: 10px; 
+}
+
+.help-text {
+    color: #00b9f1; /* Bright Blue */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.ticket-content {
+    flex-grow: 1; 
+    /* Default background for areas between cards */
+    background-color: #fcfcfc; 
+    padding: 0 15px 15px;
+}
+/* --- TOP HEADER ICON FIX (Ticket Icon) --- */
+
+/* Fix spacing for the back arrow */
+.top-nav .back-arrow {
+    margin-right: 10px;
+}
+
+.ticket-icon-container {
+    width: 32px; /* Size of the circle */
+    height: 32px;
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #e0f0ff; /* Light blue background for the circle */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    /* Push the Paytm logo away from the icon */
+    margin-right: auto; 
+}
+
+.ticket-icon {
+    font-size: 16px; /* Size of the icon inside the circle */
+    color: #00b9f1; /* Bright blue color for the icon */
+}
+
+/* Re-adjust Paytm logo positioning now that the icon is present */
+.paytm-logo-img { 
+    height: 16px; 
+    object-fit: contain; 
+    /* Adjust margin to push Help button away */
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+/* TICKET SUMMARY CARD (The large light-blue block at the top) */
+.summary-card {
+    /* Soft, less saturated light blue background */
+    background-color: #f5fafd; 
+    padding: 20px 15px 0; /* Padding at the bottom is handled by date-time */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* SITILINK LOGO CONTAINER (The circle border) */
+.sitilink-logo-container {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    border: 1px solid #e0e0e0; 
+    background-color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto 15px auto; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sitilink-logo-img {
+    height: 18px; /* Size of the logo inside the circle */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Route Info */
+.route-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700; /* Bolder font for the route */
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+/* ... other route styles ... */
+
+.ticket-type {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.passenger-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff8e1; /* Light yellow/cream */
+    border: 1px solid #ffcc80; 
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+/* ... passenger icon and count styles ... */
+
+.status-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.fare-amount {
+    font-size: 28px;
+    font-weight: 800; /* Extra bold for the fare */
+    color: #333;
+    margin-right: 8px;
+}
+
+/* Custom Verification Icon (assuming image replacement) */
+.verification-icon-img {
+    height: 28px; /* Size for the custom PNG */
+    width: auto; 
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.status-message {
+    color: #28a745;
+    font-size: 14px;
+    font-weight: 500; /* Thinner font for success text */
+}
+
+.date-time {
+    font-size: 12px;
+    color: #a0a0a0;
+    margin-top: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0; 
+    margin-bottom: 0;
+}
+
+/* VALIDITY TIMER SECTION */
+.validity-section {
+    /* Very light off-white/gray background for the timer section */
+    background-color: #f7f7f7; 
+    padding: 20px 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -15px; /* Pull up to touch the summary card border */
+    border-radius: 0 0 8px 8px;
+}
+
+.validity-label {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+/* TIMER ALIGNMENT FIXES */
+.timer-display {
+    display: flex;
+    justify-content: center;
+    /* KEY FIX: Set align-items to 'baseline' so text/numbers align by their base line */
+    align-items: baseline; 
+    margin-bottom: 15px;
+}
+
+.time-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    /* Ensure no extra line height is interfering */
+    line-height: 1; 
+}
+
+.time-unit {
+    font-size: 9px;
+    color: #888;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.separator {
+    font-size: 36px; /* Keep the font size large */
+    font-weight: 700;
+    color: #333;
+    /* KEY FIX: Use padding-bottom to physically lower the colon for better optical alignment */
+    padding-bottom: 10px; 
+    margin: 0 3px;
+    line-height: 1;
+}
+/* ... other timer styles ... */
+
+.cta-button {
+    /* Styled as an <a> tag link */
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    background-color: #00b9f1;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* TRIP & PAYMENT DETAILS CARDS (White floating cards) */
+.details-card {
+    background-color: white; 
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+/* TIGHTER VERTICAL SPACING FOR DETAIL ITEMS */
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0; 
+    font-size: 14px;
+}
+
+/* ... other detail item and breakup styles ... */
+
+.total-line {
+    /* Spacing for the 'Total' line */
+    padding-top: 12px; 
+}
+
+
+/* --- QR TICKET PAGE SPECIFIC STYLES --- */
+
+.qr-header .top-nav {
+    /* QR header is white */
+    background-color: white; 
+}
+
+.qr-ticket-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.qr-content {
+    /* QR content section should be white */
+    background-color: white;
+}
+
+.qr-summary-card {
+    background-color: white;
+    padding: 20px 15px;
+    margin-bottom: 0; 
+    text-align: center;
+}
+
+.scan-note {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* QR CODE Placeholder */
+/* --- New QR Code Image Styles --- */
+
+/* The container centers the image */
+.qr-code-placeholder-container {
+    text-align: center;
+    margin: 0 auto 30px auto; 
+    padding: 0 40px; /* Optional: adds horizontal padding inside the container */
+}
+
+/* The actual image styling */
+.qr-code-img {
+    /* Set max width to prevent it from stretching too far on larger screens */
+    max-width: 100%; 
+    /* Set a specific size for the image to match the screen's appearance */
+    width: 240px; 
+    height: auto; 
+    display: block; /* Important for centering and spacing */
+    margin: 0 auto; /* Centers the block-level image */
+}
+.qr-validity-section {
+    background-color: white; 
+    padding: 10px 15px 30px;
+    text-align: center;
+    margin-top: 0; 
+}
+
+.ticket-details-card {
+    /* Separates details from the white timer block above it */
+    border-top: 1px solid #eee; 
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* --- BOTTOM NAVIGATION BAR (Applied to both screens) --- */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: #000080; /* Dark Navy/Primary Blue */
+    border-top: none;
+    padding: 0 10px;
+}
+
+.nav-item {
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.nav-item i {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.nav-item.active {
+    opacity: 1;
+}
