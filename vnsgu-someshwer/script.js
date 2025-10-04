@@ -7,7 +7,7 @@ function updateTimer() {
     // Start with the initial remaining time (e.g., 1 hour, 50 minutes, 26 seconds)
     // You can adjust these values if needed
     let hours = 1;
-    let minutes = 42;
+    let minutes = 55;
     let seconds = 26;
 
     let totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
