@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Sitilink Ticket Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-app-container">
+        
+      <header class="header">
+        <div class="top-nav">
+            <i class="fas fa-arrow-left"></i>
+            <img src="images/paytm_logo.jpg" alt="Paytm Logo" class="paytm-logo-img"> <span class="help-text">Help</span>
+        </div>
+    </header>
+        <main class="ticket-content">
+            <section class="summary-card">
+              <div class="sitilink-logo-container">
+                <img src="images/sitilink_logo.png" alt="Surat Sitilink Logo" class="sitilink-logo-img"> 
+            </div>                
+                <div class="route-info">
+                    <span class="location from">V.N.S.G.U...</span>
+                    <i class="fas fa-arrow-right route-arrow"></i>
+                    <span class="location to">Someshwar ...</span>
+                </div>
+                
+                <p class="ticket-type">1 Adult Ticket</p>
+                
+                <div class="passenger-count">
+                    <span class="passenger-icon-placeholder">🧑‍</span> 
+                    <span class="count">1</span>
+                </div>
+                
+                <div class="status-success">
+                    <span class="fare-amount">₹4</span>
+                    <img src="images/verification.png" width="32px" height="32px" alt="" srcset="">
+                    <!-- <i class="fa-solid fa-badge-check"></i> -->
+                </div>
+                <p class="status-message">TICKET BOOKED SUCCESSFULLY</p>
+                <p class="date-time" id="current-date-time-display">30 Sep 2025, 04:08 PM</p>
+            </section>
+
+            <section class="validity-section">
+                <p class="validity-label">Your ticket is valid for</p>
+                <div class="timer-display">
+                    <div class="time-segment">
+                        <span class="time-value">01</span>
+                        <span class="time-unit">HOURS</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-segment">
+                        <span class="time-value">50</span>
+                        <span class="time-unit">MINUTES</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-segment">
+                        <span class="time-value">26</span>
+                        <span class="time-unit">SECONDS</span>
+                    </div>
+                </div>
+               <a href="qr_ticket.html"><button class="cta-button">View your Tickets</button></a> 
+                
+            </section>
+            
+            <section class="details-card">
+                <div class="card-header">Trip Details</div>
+                <div class="detail-item">
+                    <span class="label">OPERATOR</span>
+                    <span class="value">Surat Sitilink</span>
+                </div>
+                <div class="detail-item order-id-row">
+                    <span class="label">Order ID: **26013470086**</span>
+                    <span class="copy-link">copy</span>
+                </div>
+                <p class="order-id-note">For any queries regarding QR Ticket, please contact Surat Sitilink with Order Id.</p>
+            </section>
+
+            <section class="details-card payment-card">
+                <div class="card-header">Payment Details</div>
+                
+                <div class="fare-details-group">
+                    <span class="fare-header">FARE BREAKUP</span>
+                    <div class="detail-item fare-line">
+                        <span class="label">1 X Adult</span>
+                        <span class="value">₹12</span>
+                    </div>
+                    <div class="detail-item total-line">
+                        <span class="label">Total</span>
+                        <span class="value">₹12</span>
+                    </div>
+                </div>
+
+                <div class="payment-details-group">
+                    <span class="fare-header">PAYMENT MODE</span>
+                    <div class="detail-item payment-line">
+                        <span class="label">UPI Linked Bank Account</span>
+                        <span class="value">₹12</span>
+                    </div>
+                    <p class="transaction-id">Transaction ID: 527345728047</p>
+                </div>
+            </section>
+        </main>
+        
+        <nav class="bottom-nav">
+            <div class="nav-item active"><i class="fas fa-home"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fas fa-wallet"></i><span>Cashback</span></div>
+            <div class="nav-item"><i class="fas fa-question-circle"></i><span>Help</span></div>
+        </nav>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

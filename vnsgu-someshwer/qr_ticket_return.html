@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Ticket Clone</title>
+    <link rel="stylesheet" href="style_qr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-app-container">
+        <header class="header qr-header">
+            <div class="top-nav">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i></a>
+                
+                <div class="qr-ticket-icon-container">
+                    <i class="fas fa-ticket-alt qr-ticket-icon"></i> 
+                </div>
+                
+                <span class="qr-ticket-label">1 QR Ticket</span>
+                
+                <span class="help-text">Help</span>
+            </div>
+        </header>      
+        <main class="ticket-content qr-content">
+            <section class="qr-summary-card">
+                <div class="qr-route-info">
+                    <span class="location from">Someshwar ...</span>
+                    <i class="fas fa-arrow-right route-arrow"></i>
+                    <span class="location to">V.N.S.G.U...</span>
+                </div>
+                
+                <p class="scan-note">Scan this QR at Entry & Exit Points</p>
+                
+                <div class="qr-code-placeholder-container">
+                    <img src="images/qr_code.png" alt="Bus Ticket QR Code" class="qr-code-img">
+                </div>
+            </section>
+
+            <section class="qr-validity-section">
+                <p class="validity-label">Your ticket is valid for</p>
+                <div class="timer-display">
+                    <div class="time-segment">
+                        <span class="time-value">01</span>
+                        <span class="time-unit">HOURS</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-segment">
+                        <span class="time-value">50</span>
+                        <span class="time-unit">MINUTES</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-segment">
+                        <span class="time-value">26</span>
+                        <span class="time-unit">SECONDS</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="details-card ticket-details-card">
+                <div class="card-header">
+                    Ticket Details <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Issued On</span>
+                    <p class="date-time" id="current-date-time-display">30 Sep 2025, 04:08 PM</p>                </div>
+                <div class="detail-item">
+                    <span class="label">Order ID</span>
+                    <span class="value">26013470086</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Order Item ID</span>
+                    <span class="value">26807050582</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Ticket Type</span>
+                    <span class="value">1 Adult</span>
+                </div>
+            </section>
+        </main>
+        
+        <nav class="bottom-nav">
+            <div class="nav-item active"><i class="fas fa-home"></i><span>Home</span></div>
+            <div class="nav-item"><i class="fas fa-wallet"></i><span>Cashback</span></div>
+            <div class="nav-item"><i class="fas fa-question-circle"></i><span>Help</span></div>
+        </nav>
+    </div>
+<script src="script.js"></script>
+    </body>
+</html>
