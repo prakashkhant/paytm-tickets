@@ -70,8 +70,8 @@ body {
     margin-bottom: 15px;
     text-align: center;
     position: relative;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     overflow: hidden; /* keeps curved borders clean */
 }
 
@@ -79,13 +79,13 @@ body {
 .summary-card::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
     width: 100%;
-    height: 8px;
-    background-color: navy;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    height: 16px;
+    background-color: #2bb0dc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Sky blue top border layer */
@@ -95,10 +95,10 @@ body {
     bottom: 4px; /* adjust spacing between two colors */
     left: 0;
     width: 100%;
-    height: 4px;
-    background-color: #00bfff; /* sky blue */
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    height: 8px;
+    background-color: navy; /* sky blue */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
@@ -155,21 +155,25 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff8e1; 
-    border: 1px solid #ffcc80; 
-    padding: 4px 10px;
+    background-color: #ffffff; 
+    border: 1px solid #ffffff; 
+    padding: 4px 16px 1px 8px;
     border-radius: 20px;
     margin-bottom: 25px;
+
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .passenger-icon-placeholder {
-    font-size: 18px; 
+    font-size: 26px; 
     margin-right: 4px;
+    margin-bottom: -8px;
+    padding-bottom: 0px;
+  
 }
 .passenger-count .count {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
 }
 
