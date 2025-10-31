@@ -149,6 +149,7 @@ body {
     font-size: 13px;
     color: #888;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .passenger-count {
@@ -167,7 +168,7 @@ body {
 .passenger-icon-placeholder {
     font-size: 26px; 
     margin-right: 4px;
-    margin-bottom: -8px;
+    margin-bottom: -5px;
     padding-bottom: 0px;
   
 }
@@ -197,18 +198,19 @@ body {
 }
 
 .status-message {
-    color: #a0a0a0;
+    color: #8e8e8e;
     font-size: 14px;
     font-weight: 600;
 }
 
 .date-time {
     font-size: 12px;
-    color: #a0a0a0;
+    color: #8e8e8e;
     margin-top: 5px;
     padding-bottom: 20px;
     border-bottom: 1px solid #e0e0e0; 
     margin-bottom: 0;
+    margin-top: 30px;
 }
 
 /* VALIDITY TIMER SECTION */
@@ -370,25 +372,33 @@ body {
 
 /* --- BOTTOM NAVIGATION BAR --- */
 .bottom-nav {
+    position: fixed;
+    bottom: 10px; /* distance from bottom */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 60px;
+    height: 40px;
     background-color: #000080;
     border-top: none;
     padding: 0 10px;
+    width: 50%;
+    border-radius: 50px;
+    z-index: 1000; /* keeps it above other content */
 }
+
 
 .nav-item {
     text-align: center;
     color: #fff;
-    font-size: 10px;
+    font-size: 8px;
     cursor: pointer;
     opacity: 0.7;
 }
 
 .nav-item i {
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     margin-bottom: 2px;
 }
