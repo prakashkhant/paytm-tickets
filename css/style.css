@@ -373,7 +373,7 @@ body {
 /* --- BOTTOM NAVIGATION BAR --- */
 .bottom-nav {
     position: fixed;
-    bottom: 10px; /* distance from bottom */
+    bottom: 5px; /* distance from bottom */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
